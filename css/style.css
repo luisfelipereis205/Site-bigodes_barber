@@ -1,26 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-    --cor-principal:#0A0085;
-    --cor2: #020873;
-    --cor3: #021859;
-    --cor4: #43E0CB;
-    --cor5: #F2C1AE;
-    --fonte-titulos:"Fjalla One", sans-serif;
-    --fonte-paragrafos:"Work Sans", sans-serif;
+  --cor-principal: #0a0085;
+  --cor2: #020873;
+  --cor3: #021859;
+  --cor4: #43e0cb;
+  --cor5: #f2c1ae;
+  --branco: #ffffff;
+  --cinza: #f5f5f5;
+  --fonte-titulos: "Fjalla One", sans-serif;
+  --fonte-paragrafos: "Work Sans", sans-serif;
 }
 
+/* RESET */
 * {
   margin: 0;
-  padding: 0;  
+  padding: 0;
   box-sizing: border-box;
 }
 
-html{
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: var(--cor-principal);
+body {
+  background-color: var(--cor-principal);
+}
+
+/* CONTAINER PADRÃO */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background: var(--cor2);
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 40px;
+  width: 100%;
+  height: auto;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--branco);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--cor4);
 }
