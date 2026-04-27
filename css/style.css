@@ -70,3 +70,64 @@ body {
 .nav a:hover {
   color: var(--cor4);
 }
+
+/* HERO */
+.hero{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../img/banner.jpg') center/cover no-repeat;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  gap: 40px;
+}
+.hero-image{
+  max-width: 50%;
+  height: auto;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 200, 0.4))
+}
+
+.hero h2{
+  display: block;
+    font-family: var(--fonte-titulos);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--cinza);
+}
+
+.hero span{
+  color: var(--cor4);
+}
+
+.hero-content {
+  max-width: 50%;
+  gap: 20pz;
+}
+
+.hero p{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--cinza);
+}
+
+.btn{
+    background: var(--cor4);
+    color: var(--branco);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: var(--cor5);
+}
