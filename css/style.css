@@ -37,7 +37,13 @@ body {
 
 /* HEADER */
 .header {
-  background: var(--cor2);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
   text-transform: uppercase;
 }
@@ -73,7 +79,7 @@ body {
 
 /* HERO */
 .hero{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
@@ -83,6 +89,7 @@ body {
 
 .hero-container {
   display: flex;
+  margin-top: 100px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -130,4 +137,98 @@ body {
 
 .btn:hover{
     background: var(--cor5);
+}
+
+/* SERVIÇOS */
+.servicos{
+    background: var(--cor3);
+    text-align: center;
+}
+
+.services-content{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+  margin: 50px;
+}
+
+.services-content h2 {
+  color: var(--branco);
+}
+.subtitulo{
+    color: var(--cinza) ;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* GRID */
+.lista-servicos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card-servico{
+    background: var(--cor3);
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-servico h3 {
+  color: var(--branco);
+}
+.card-servico p {
+  color: var(--cinza);
+}
+/* EFEITO HOVER */
+.card-servico:hover{
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* BORDA ANIMADA */
+.card-servico::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: var(--cor4);
+    top: 0;
+    left: 0;
+}
+
+/* TITULO */
+.card-servico h3{
+    font-family: var(--fonte-titulos);
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card-servico p{
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* PREÇO */
+.card-servico span{
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+/* CARD DESTAQUE */
+.destaque{
+    border: 2px solid var(--cor4);
+    transform: scale(1.05);
+}
+
+.destaque:hover{
+    transform: scale(1.08);
 }
